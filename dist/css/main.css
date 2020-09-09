@@ -1,56 +1,48 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .banner {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .banner .line {
   background-color: #fff;
   width: 30em;
   height: 1px;
-  -webkit-animation: lineIn 1s;
-          animation: lineIn 1s;
+  animation: lineIn 1s;
 }
 
 .banner .name h3 {
   font-family: "Kumbh Sans";
   font-size: 3.5em;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
+  transform: translateY(-1.2em);
   overflow: hidden;
 }
 
 .banner .name h3 span {
   display: block;
-  -webkit-animation: h3Reveal 2s;
-          animation: h3Reveal 2s;
+  animation: h3Reveal 1.7s;
 }
 
-@-webkit-keyframes lineIn {
-  0% {
-    width: 0em;
-  }
-  100% {
-    width: 30em;
-  }
+.banner .name p {
+  font-family: "Kumbh Sans";
+  font-weight: 300;
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  transform: translateY(-1.3em);
+}
+
+.banner .name p span {
+  display: block;
+  animation: descReveal 1.7s;
 }
 
 @keyframes lineIn {
@@ -62,33 +54,46 @@
   }
 }
 
-@-webkit-keyframes h3Reveal {
+@keyframes h3Reveal {
   0% {
-    -webkit-transform: translate(0, 110%);
-            transform: translate(0, 110%);
+    transform: translate(0, 140%);
   }
-  75% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
+  50% {
+    transform: translate(0, 110%);
   }
   100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
-@keyframes h3Reveal {
-  0% {
-    -webkit-transform: translate(0, 110%);
-            transform: translate(0, 110%);
+@media screen and (max-width: 440px) {
+  .banner .line {
+    width: 15em;
   }
-  75% {
-    -webkit-transform: translate(0, 100%);
-            transform: translate(0, 100%);
+  .banner .name h3 {
+    font-size: 2em;
+    text-align: center;
+    transform: translateY(-1.4em);
   }
-  100% {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+  .banner .name p {
+    font-family: "Kumbh Sans";
+    font-weight: 300;
+    text-align: center;
+    font-size: 1.3em;
+    margin: 0;
+    transform: translateY(-1em);
+  }
+  .banner .name p span {
+    display: block;
+    animation: descReveal 1.7s;
+  }
+  @keyframes lineIn {
+    0% {
+      width: 0em;
+    }
+    100% {
+      width: 15em;
+    }
   }
 }
 
@@ -97,4 +102,3 @@ body {
   height: 100vh;
   background: #202020;
 }
-/*# sourceMappingURL=main.css.map */

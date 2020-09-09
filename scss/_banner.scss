@@ -1,52 +1,106 @@
 .banner {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
 
-    .line {
-        background-color: #fff;
-        width: 30em;
-        height: 1px;
-        animation: lineIn 1s;
-    }
+   .line {
+      background-color: #fff;
+      width: 30em;
+      height: 1px;
+      animation: lineIn 1s;
+   }
 
-    .name {
-        h3 {
-            font-family: $style-font;
-            font-size: 3.5em;
-            transform: translateY(-1em);
-            overflow: hidden;
+   .name {
+      h3 {
+         font-family: $style-font;
+         font-size: 3.5em;
+         transform: translateY(-1.2em);
+         overflow: hidden;
 
-            span {
-                display: block;
-                animation: h3Reveal 2s;
-            }
-        }
-    }
+         span {
+            display: block;
+            animation: h3Reveal 1.7s;
+         }
+      }
+
+      p {
+         font-family: $style-font;
+         font-weight: 300;
+         text-align: center;
+         font-size: 2em;
+         margin: 0;
+         transform: translateY(-1.3em);
+
+         span {
+            display: block;
+            animation: descReveal 1.7s;
+         }
+      }
+   }
 }
 
-
 @keyframes lineIn {
-    0% {
-        width: 0em;
-    }
-    100% {
-        width: 30em;
-    }
+   0% {
+      width: 0em;
+   }
+   100% {
+      width: 30em;
+   }
 }
 
 @keyframes h3Reveal {
-    0% {
-      transform: translate(0,110%);
-    }
+   0% {
+      transform: translate(0, 140%);
+   }
 
-    75% {
-        transform: translate(0,100%);
-    }
+   50% {
+      transform: translate(0, 110%);
+   }
 
-    100% {
-      transform: translate(0,0);
-    }
-  }
+   100% {
+      transform: translate(0, 0);
+   }
+}
+
+
+@media screen and (max-width: 440px) {
+    .banner {
+     
+        .line {
+           width: 15em;
+        }
+     
+        .name {
+           h3 {
+              font-size: 2em;
+              text-align: center;
+              transform: translateY(-1.4em);
+           }
+     
+           p {
+              font-family: $style-font;
+              font-weight: 300;
+              text-align: center;
+              font-size: 1.3em;
+              margin: 0;
+              transform: translateY(-1em);
+     
+              span {
+                 display: block;
+                 animation: descReveal 1.7s;
+              }
+           }
+        }
+     }
+
+     @keyframes lineIn {
+        0% {
+           width: 0em;
+        }
+        100% {
+           width: 15em;;
+        }
+     }
+}
