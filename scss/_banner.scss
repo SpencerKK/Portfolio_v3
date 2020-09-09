@@ -14,7 +14,7 @@
       left: 0;
       z-index: -1;
       opacity: 1;
-      animation: vidAni 4s;
+      animation: vidAni 3.5s;
    }
 
    .line {
@@ -22,6 +22,7 @@
       width: 30em;
       height: 1px;
       animation: lineIn 1s;
+      margin: 0;
    }
 
    .name {
@@ -43,13 +44,21 @@
          text-align: center;
          font-size: 2em;
          margin: 0;
+         padding: 0;
          transform: translateY(-1.3em);
+         overflow: hidden;
 
          span {
             display: block;
-            animation: descReveal 1.7s;
+            animation: descReveal 2.4s;
          }
       }
+   }
+
+   .fa-angle-double-down {
+      font-size: 1.3em;
+      transform: translateY(-1.5em);
+      animation: theCarets 3s;
    }
 }
 
@@ -76,6 +85,37 @@
    }
 }
 
+@keyframes descReveal {
+   0% {
+      transform: translate(0, -140%);
+   }
+
+   70% {
+      transform: translate(0, -110%);
+   }
+
+   100% {
+      transform: translate(0, 0);
+   }
+}
+
+@keyframes theCarets {
+   0% {
+      opacity: 0;
+      transform: translateY(-4em);
+   }
+
+   70% {
+      opacity: 0;
+      transform: translateY(-3em);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(-1.5em);
+   }
+}
+
 @keyframes vidAni {
     0% {
         opacity: 0;
@@ -86,7 +126,7 @@
     }
 
     100% {
-        opacity: 1
+        opacity: 1;
     }
 }
 
@@ -116,6 +156,29 @@
                animation: descReveal 1.7s;
             }
          }
+      }
+
+      .fa-angle-double-down {
+         font-size: 1.3em;
+         transform: translateY(-0.5em);
+         animation: theCarets 3s;
+      }
+   }
+
+   @keyframes theCarets {
+      0% {
+         opacity: 0;
+         transform: translateY(-4em);
+      }
+   
+      70% {
+         opacity: 0;
+         transform: translateY(-3em);
+      }
+   
+      100% {
+         opacity: 1;
+         transform: translateY(-0.5em);
       }
    }
 
