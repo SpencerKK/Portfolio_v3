@@ -13,7 +13,7 @@
       top: 0;
       left: 0;
       z-index: -1;
-      opacity: 0.6;
+      opacity: 1;
       animation: vidAni 4s;
    }
 
@@ -81,12 +81,12 @@
         opacity: 0;
     }
 
-    60% {
+    50% {
         opacity: 0;
     }
 
     100% {
-        opacity: 0.6
+        opacity: 1
     }
 }
 
