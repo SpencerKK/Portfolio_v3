@@ -12,6 +12,18 @@
   flex-direction: column;
 }
 
+.banner video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+  animation: vidAni 4s;
+}
+
 .banner .line {
   background-color: #fff;
   width: 30em;
@@ -63,6 +75,18 @@
   }
   100% {
     transform: translate(0, 0);
+  }
+}
+
+@keyframes vidAni {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
   }
 }
 

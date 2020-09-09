@@ -5,6 +5,18 @@
    align-items: center;
    flex-direction: column;
 
+   video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.6;
+      animation: vidAni 4s;
+   }
+
    .line {
       background-color: #fff;
       width: 30em;
@@ -64,43 +76,55 @@
    }
 }
 
+@keyframes vidAni {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.6
+    }
+}
 
 @media screen and (max-width: 440px) {
-    .banner {
-     
-        .line {
-           width: 15em;
-        }
-     
-        .name {
-           h3 {
-              font-size: 2em;
-              text-align: center;
-              transform: translateY(-1.4em);
-           }
-     
-           p {
-              font-family: $style-font;
-              font-weight: 300;
-              text-align: center;
-              font-size: 1.3em;
-              margin: 0;
-              transform: translateY(-1em);
-     
-              span {
-                 display: block;
-                 animation: descReveal 1.7s;
-              }
-           }
-        }
-     }
+   .banner {
+      .line {
+         width: 15em;
+      }
 
-     @keyframes lineIn {
-        0% {
-           width: 0em;
-        }
-        100% {
-           width: 15em;;
-        }
-     }
+      .name {
+         h3 {
+            font-size: 2em;
+            text-align: center;
+            transform: translateY(-1.4em);
+         }
+
+         p {
+            font-family: $style-font;
+            font-weight: 300;
+            text-align: center;
+            font-size: 1.3em;
+            margin: 0;
+            transform: translateY(-1em);
+
+            span {
+               display: block;
+               animation: descReveal 1.7s;
+            }
+         }
+      }
+   }
+
+   @keyframes lineIn {
+      0% {
+         width: 0em;
+      }
+      100% {
+         width: 15em;
+      }
+   }
 }
