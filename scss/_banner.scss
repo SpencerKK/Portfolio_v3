@@ -1,0 +1,52 @@
+.banner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .line {
+        background-color: #fff;
+        width: 30em;
+        height: 1px;
+        animation: lineIn 1s;
+    }
+
+    .name {
+        h3 {
+            font-family: $style-font;
+            font-size: 3.5em;
+            transform: translateY(-1em);
+            overflow: hidden;
+
+            span {
+                display: block;
+                animation: h3Reveal 2s;
+            }
+        }
+    }
+}
+
+
+@keyframes lineIn {
+    0% {
+        width: 0em;
+    }
+    100% {
+        width: 30em;
+    }
+}
+
+@keyframes h3Reveal {
+    0% {
+      transform: translate(0,110%);
+    }
+
+    75% {
+        transform: translate(0,100%);
+    }
+
+    100% {
+      transform: translate(0,0);
+    }
+  }
