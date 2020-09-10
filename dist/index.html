@@ -4,17 +4,20 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link
-         href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400&display=swap"
+         href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
          rel="stylesheet"
       />
-      <script src="https://kit.fontawesome.com/228a485911.js" crossorigin="anonymous"></script>
+      <script
+         src="https://kit.fontawesome.com/228a485911.js"
+         crossorigin="anonymous"
+      ></script>
       <link rel="stylesheet" href="css/main.css" />
       <title>Spencer Kenealy Portfolio</title>
    </head>
    <body>
       <div class="banner">
-        <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
-            <source src="./images/sunset-video.mp4" type="video/mp4">
+         <video playsinline autoplay muted loop>
+            <source src="./images/sunset-video.mp4" type="video/mp4" />
          </video>
          <div class="line"></div>
          <div class="name">
@@ -28,8 +31,44 @@
          <i class="fas fa-angle-double-down"></i>
       </div>
 
-      <div class="about">
-         <h1>About</h1>
+      <div class="projects">
+         <h1 id="projects-title">Some Projects I've Built</h1>
+
+         <div class="projects-container">
+            <div class="project-card">
+               <img src="images/spencer-movies-screenshot.png" />
+               <p class="project-title">Spencer Movies</p>
+               <div class="project-opts">
+                  <p>Live</p>
+                  <p>Code</p>
+               </div>
+            </div>
+            <div class="project-card">
+               <img src="images/take-note-screenshot.png" />
+               <p class="project-title">Take Note</p>
+               <div class="project-opts">
+                  <p>Live</p>
+                  <p>Code</p>
+               </div>
+            </div>
+            <div class="project-card">
+               <img src="images/rtl-screencap-laptop.png" />
+               <p class="project-title">Ready To Launch</p>
+               <div class="project-opts">
+                  <p>Live</p>
+                  <p>Code</p>
+               </div>
+            </div>
+            <div class="project-card">
+               <img src="images/weather-weekly-screenshot.png" />
+               <p class="project-title">Weather Weekly</p>
+               <div class="project-opts">
+                  <p>Live</p>
+                  <p>Code</p>
+               </div>
+            </div>
+         </div>
       </div>
+
    </body>
 </html>

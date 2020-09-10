@@ -306,8 +306,45 @@
   }
 }
 
-.about {
-  height: 20em;
+.projects {
+  font-family: "Kumbh Sans";
+  margin-top: 2em;
+}
+
+.projects #projects-title {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+.projects .projects-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projects .projects-container .project-card {
+  padding: 1em 1em 1em 1em;
+  margin: 2em;
+  background-color: #4f4f4f;
+  border-radius: 7px;
+  color: #fff;
+  text-align: center;
+}
+
+.projects .projects-container .project-card img {
+  width: 20em;
+  border-radius: 7px;
+}
+
+.projects .projects-container .project-card .project-title {
+  padding: 1em 0;
+  font-size: 1.2em;
 }
 
 body {

@@ -1,0 +1,35 @@
+.projects {
+    font-family: $style-font;
+    margin-top: 2em;
+
+    #projects-title {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: 900;
+    }
+
+    .projects-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .project-card {
+            padding: 1em 1em 1em 1em;
+            margin: 2em;
+            background-color: #4f4f4f;
+            // border: 2px solid grey;
+            border-radius: 7px;
+            color: #fff;
+            text-align: center;
+            img {
+                width: 20em;
+                border-radius: 7px;
+            }
+
+            .project-title {
+                padding: 1em 0;
+                font-size: 1.2em;
+            }
+        }
+    }
+}
